@@ -5,8 +5,10 @@ name = "pypi"
 
 [packages]
 streamlit = "*"
+watchdog = "*"
+snowflake-snowpark-python = {extras = ["pandas"], version = "*"}
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.8"
