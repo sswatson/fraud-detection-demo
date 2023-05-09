@@ -7,6 +7,9 @@ name = "pypi"
 streamlit = "*"
 watchdog = "*"
 snowflake-snowpark-python = {extras = ["pandas"], version = "*"}
+streamlit-extras = "*"
+streamlit-agraph = "*"
+pandas = "*"
 
 [dev-packages]
 
