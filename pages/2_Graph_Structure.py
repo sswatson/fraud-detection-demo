@@ -25,6 +25,8 @@ One notable characteristic of this dataset is that much of the predictive value 
 In other words, we don't have a lot of personal user attributes, but we do have a lot of information about who they communicate with, who those people communicate with, and so on.
 
 For this reason, it's helpful to visualize the data as a graph whose nodes are users and whose edges are communications between users.
+
+Adjust the slider below to select a particular user. The visualization below will show all of that user's voice-call connections as well as any connections between the folks that user has called.
 """
 
 offset = st.number_input("user number", 0, 1000, 100)
@@ -52,3 +54,7 @@ JOIN all_users u2 ON v.opposite_no_m = u2.phone_no;
 )
 
 dataframe_graph(df)
+
+"""
+You might observe from the hub-and-spokes shape of these visualizations that there are very few recorded calls between folks who have been called by the same person. In other words, the graph contains very few *triangles*.
+"""
