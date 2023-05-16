@@ -28,7 +28,7 @@ table_name = st.selectbox("table name:", ["voc", "sms", "app", "user"])
 sql_query(conn, f"""SELECT * FROM {table_name} LIMIT 5;""")
 
 """
-Some of the column names are difficult to interpret on their own, so here are some descriptions:
+Some of the column names are not straightforward to interpret on their own, so here are some descriptions:
 """
 
 st.dataframe(pd.read_csv(io.StringIO("""
@@ -73,6 +73,8 @@ Most notably, the `label` column in the `user` table indicates whether the user 
 """
 
 """
+### Row counts
+
 Let's take a look at the number of rows in each table:
 """
 
@@ -87,6 +89,8 @@ SELECT 'user' AS table_name, COUNT(*) AS row_count FROM user;
 """)
           
 """
+### User coverage in the call and text records
+
 There are about 6000 users and several million SMS messages, voice calls, and app usage records. Let's take a look at the number of unique users in each table:
 """
 
@@ -105,6 +109,8 @@ Since all of these numbers are close to the number of users in the dataset, we c
 """
 
 """
+### Label Balance
+
 Anamoly detection data are usually highly imbalanced, with the vast majority of training instances being normal. Let's take a look at the number of spammers and non-spammers in the dataset:
 """
 
