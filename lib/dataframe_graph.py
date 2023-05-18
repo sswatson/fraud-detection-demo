@@ -28,10 +28,10 @@ def dataframe_graph(df: pd.DataFrame, edge_label: str = None):
 
     config = Config(
         width=750,
-        height=950,
+        height=550,
         directed=True,
         hierarchical=False,
-        timestep=0.25,
+        timestep=0.15,
     )
 
     agraph(nodes=nodes, edges=edges, config=config)
