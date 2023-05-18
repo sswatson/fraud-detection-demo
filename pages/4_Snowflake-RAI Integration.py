@@ -1,54 +1,56 @@
 
 import streamlit as st
 
-from lib.util import set_page_config
+from lib.util import set_page_config, check_password
 set_page_config()
 
-"""
-# Snowflake-RAI Integration
+if check_password():
 
-In this section, we'll look at how to integrate RelationalAI with Snowflake and use it to calculate graph quantities of interest.
+    """
+    # Snowflake-RAI Integration
 
-## Setup
+    In this section, we'll look at how to integrate RelationalAI with Snowflake and use it to calculate graph quantities of interest.
 
-Snowflake account admins can create and inspect a RelationalAI integration using the following commands from a Snowflake SQL worksheet:
+    ## Setup
 
-```sql
-CREATE SERVICE rai;
-SHOW SERVICES;
-DESC SERVICE rai;
-```
+    Snowflake account admins can create and inspect a RelationalAI integration using the following commands from a Snowflake SQL worksheet:
 
-*Note: this does not exist yet. This is part of what we're announcing, not launching.*
+    ```sql
+    CREATE SERVICE rai;
+    SHOW SERVICES;
+    DESC SERVICE rai;
+    ```
 
-## Data Streams
+    *Note: this does not exist yet. This is part of what we're announcing, not launching.*
 
-To perform graph computations on a table, first create a data stream from the table:
+    ## Data Streams
 
-```sql
-call create_data_stream(
-    'snowflake_table_name',
-    'your_rai_database',
-    'rai_table_name',
-);
-```
+    To perform graph computations on a table, first create a data stream from the table:
 
-## Graph Analysis
+    ```sql
+    call create_data_stream(
+        'snowflake_table_name',
+        'your_rai_database',
+        'rai_table_name',
+    );
+    ```
 
-To calcluate PageRank, for example: 
+    ## Graph Analysis
 
-```sql
-select *
-FROM Table(
-    relgraphlib(
-        'your-rel-engine',
-        'your-rel-db',
-        'rel-table-name',
-        'first-column-name',
-        'second-column-name',
-        'pagerank'
-    )
-);
-```
+    To calcluate PageRank, for example: 
 
-"""
+    ```sql
+    select *
+    FROM Table(
+        relgraphlib(
+            'your-rel-engine',
+            'your-rel-db',
+            'rel-table-name',
+            'first-column-name',
+            'second-column-name',
+            'pagerank'
+        )
+    );
+    ```
+
+    """
