@@ -11,8 +11,8 @@ def dataframe_graph(df: pd.DataFrame, edge_label: str = None):
         Node(
             id=entry,
             size=20,
-            #shape="circularImage",
-            #image=f"https://avatars.dicebear.com/api/{'fe' if (entry[-1] in '01234567') else ''}male/{entry}.svg"
+            shape="circularImage",
+            image=f"https://avatars.dicebear.com/api/{'fe' if (entry[-1] in '01234567') else ''}male/{entry}.svg"
         )
         for entry in unique_nodes
     ]

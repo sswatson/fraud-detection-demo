@@ -8,7 +8,7 @@ page_setup()
 
 *THIS CONTENT IS WORK-IN-PROGRESS*
 
-*Note: the introduction below should be wordsmithed at a later stage. This is GPT-generated placeholder to convey the gist.*
+*Note: the introduction below should be wordsmithed at a later stage . This is GPT-generated placeholder to convey the gist.*
 
 In an increasingly digital world, the menace of fraud has grown exponentially, leading to significant financial losses and numerous other non-monetary impacts. In 2021, the total global loss due to fraud was approximately $40 billion.
 

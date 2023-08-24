@@ -23,7 +23,7 @@ The `user` table contains limited information for predicting the fraudster statu
 """
 
 st.code(
-    f"""SELECT * FROM user LIMIT 5;""",
+    """SELECT * FROM user LIMIT 5;""",
     "sql"
 )
 
@@ -43,7 +43,7 @@ FROM
 user
 LIMIT 5;
 """)
-                
+
 df
 
 """
@@ -84,7 +84,7 @@ SELECT DISTINCT
 FROM voc
 WHERE phone_no_m IN (SELECT phone_no_m FROM USER_SUBSET)
 ORDER BY opposite_no_m
-LIMIT 1000;
+LIMIT 10;
 """
 
 pretty_query = """

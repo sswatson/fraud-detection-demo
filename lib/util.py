@@ -4,7 +4,8 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 
 def next_page(name: str):
-    if st.button(name + " →"):
+    btn = st.button(name + " →")
+    if btn:
         switch_page(name)
 
 def page_setup():
